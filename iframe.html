@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <style>
+        *, ::after, ::before {
+            font-family: 'Georgia', serif;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            color: #000;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+    	.main {
+    		min-height: 101px;
+            width: 100%;
+            padding: 20px 0;
+    	}
+
+        .main .header {
+            color: #001c4c;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 5px 0;
+            border-top: 3px solid #2a4a73;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .main .item {
+            display: block;
+            margin-bottom: 25px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .main .item img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all 750ms;
+            border-top: 2px solid #2a4a73;
+            padding-top: 2px;
+        }
+
+        .main .item .image-ratio {
+            height: 0px;
+            line-height: 0px;
+            padding-top: 56%;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main .item .title {
+            color: #000;
+            text-align: left;
+            line-height: 24px;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-999736-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-999736-3', {
+            'optimize_id': 'GTM-K8M62T',
+            'send_page_view': false
+        });
+    </script>
+
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+  	<div id="main" class="main"></div>
+
+    <script>
+    (function () {
+        setInterval(function() {
+            try {
+                var e,t;
+                window.parent.postMessage({
+                    sentinel:"amp",
+                    type:"embed-size",
+                    height:(e=document.body,t=document.documentElement,Math.max(e.scrollHeight,e.offsetHeight,t.clientHeight,t.scrollHeight,t.offsetHeight))
+                },"*");
+
+                window.parent.postMessage({
+                  sentinel: 'amp',
+                  type: 'embed-ready'
+                }, '*');
+            } catch(e) {}
+        },1e3); 
+    }());
+    </script>    
+  </body>
+</html>
